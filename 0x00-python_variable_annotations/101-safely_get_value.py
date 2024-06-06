@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-"""define a function"""
+#!/usr/bin/env python3
+"""define a function with a TypeVar"""
 from typing import Any, Dict, Union, Mapping, TypeVar
 T = TypeVar('T')
 
