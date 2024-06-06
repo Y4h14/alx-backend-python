@@ -4,4 +4,4 @@
 
 def to_str(n: float) -> str:
     """return the srt form of a float"""
-    return f"{n},"
+    return f"{n}"
