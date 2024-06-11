@@ -5,7 +5,7 @@ import asyncio
 from typing import AsyncGenerator
 
 
-async def async_generator() -> AsyncGenerator:
+async def async_generator() -> AsyncGenerator[float, None]:
     """ a coroutine that yeild a random numbeir"""
     for i in range(10):
         await asyncio.sleep(1)
