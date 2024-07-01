@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""defines a unittest class"""
 from client import GithubOrgClient, get_json
 import unittest
 from unittest.mock import Mock, patch, MagicMock
@@ -19,4 +20,4 @@ class TestGithubOrgClient(unittest.TestCase):
         self.assertEqual(org_client.org(), resp)
         mock_func.assert_called_once_with(
             f"https://api.github.com/orgs/{org}:"
-        )
+            )
