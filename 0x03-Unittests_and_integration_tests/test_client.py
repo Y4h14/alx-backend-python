@@ -70,3 +70,12 @@ class TestGithubOrgClient(unittest.TestCase):
                 ["akd", "akd"])
             mock.assert_called_once()
         get_josn_mock.assert_called_once()
+
+    @parameterized.expand([
+        ({'license': {'key': "my_license"}}, "my_license", True),
+        ({'license': {'key': "other_license"}}, "other_license", False),
+    ])
+    def test_has_license(self, repo, key, expected):
+        org_client = GithubOrgClient("facebook")
+        client_has_licence = org_client.has_license(repo, key)
+        self.assertEqual(client_has_licence, expected)
